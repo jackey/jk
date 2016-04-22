@@ -7,8 +7,8 @@ class Footer extends React.Component {
 	render() {
 
 		return (
-			<div styleName="footer">
-				<h5>简单电商 - 官方平台 @CopyRight</h5>
+			<div styleName="app-footer">
+				<h5 styleName="footer-title">我是码农 我为自己代言</h5>
 			</div>
 		);
 	}

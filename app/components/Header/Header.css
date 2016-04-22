@@ -1,4 +1,10 @@
 .header {
-	height: 25px;
-	line-height: 25px;
+    height: 10em;
+    line-height: 10em;
+}
+
+.header-title {
+    font-size: 17px;
+    color: #A8A1A1;
+    text-align: center;
 }

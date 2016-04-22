@@ -8,7 +8,7 @@ class Header extends React.Component {
 
 		return (
 			<div styleName="header">
-				<h1>简单电商 - 官方平台</h1>
+				<h1 styleName="header-title">"在您的朋友圈分享Gihub"</h1>
 			</div>
 		);
 	}

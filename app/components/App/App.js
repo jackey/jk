@@ -13,10 +13,10 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div styleName="container">
+			<div styleName="app-container">
 				<Header />
 
-				<div styleName="appBody">
+				<div styleName="app-body">
 					{this.props.children}
 				</div>
 

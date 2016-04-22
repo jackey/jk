@@ -1,3 +1,33 @@
 .home {
 	
 }
+
+.btn-submit {
+
+}
+
+.form-row {
+
+}
+
+.input-github-url {
+    width: 80%;
+    height: 2.5em;
+    line-height: 2.5em;
+    padding-left: 0.5em;
+    box-sizing: border-box;
+    display: block;
+    color: #000;
+    margin: 0 auto;
+}
+
+.btn-submit-github {
+    width: 100px;
+    font-size: 13px;
+    height: 2.5em;
+    line-height: 2.5em;
+    display: block;
+    margin-left: 1em;
+    margin: 0 auto;
+    margin-top: 1em;
+}

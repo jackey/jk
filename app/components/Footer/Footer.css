@@ -1,4 +1,18 @@
-.footer {
-	height: 25px;
-	line-height: 25px;
+.app-footer {
+    position: fixed;
+    bottom: 0px;
+    height: 25px;
+    line-height: 25px;
+    width: 100%;
+    left: 0px;
+}
+
+.footer-title{
+    font-size: 13px;
+    text-align: center;
+    color: #9C9B9B;
+    height: 1em;
+    line-height: 1em;
+    padding: 0px;
+    margin: 0px;
 }
