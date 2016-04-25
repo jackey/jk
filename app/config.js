@@ -7,6 +7,6 @@ export const server = {
 	port :4000
 };
 
-export const githubAPI = {
+export const Github = {
 	host: 'https://api.github.com',
 };

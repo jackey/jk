@@ -28,9 +28,7 @@ ReactDom.render((
 				<IndexRoute component={HomeRoute} />
 			</Route>
 
-		{/* Quick Sell*/}
-			<Route path="/dealer/quick-sell" component={DealerQuickSellHome} />
-			<Route path="/dealer/upload-product" component={DealerUploadProduct} />
+			
 		</Router>
 
 	</Provider>), document.getElementById('body'));

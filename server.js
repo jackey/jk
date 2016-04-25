@@ -3,7 +3,7 @@ var express = require('express');
 var webpack = require('webpack');
 var config = require('./webpack.config.dev');
 
-var port = 3000;
+var port = 4000;
 var app = express();
 var compiler = webpack(config);
 
