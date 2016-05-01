@@ -1,11 +1,11 @@
-var path = require('path');
-var express = require('express');
-var webpack = require('webpack');
-var config = require('./webpack.config.dev');
+import path  from 'path';
+import express from 'express';
+import webpack from 'webpack';
+import config from './webpack.config.dev';
 
-var port = 4000;
-var app = express();
-var compiler = webpack(config);
+import app from './backend';
+let port = 4000;
+let compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
 	noInfo: true,
@@ -18,7 +18,7 @@ app.use('/static', (req, res) => {
 	res.send('hello, static');
 });
 
-app.get('*', function (req, res) {
+app.get('*',  (req, res) =>  {
 	console.log('client connect from ' + req.connection.remoteAddress);
 	res.sendFile(path.join(__dirname, 'app/index.html'));
 });
@@ -30,4 +30,4 @@ app.listen(port, function (err) {
 	else {
 		console.log("Server listen on http://127.0.0.1:" + port );
 	}
-});
+}); 

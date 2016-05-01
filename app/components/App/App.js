@@ -11,10 +11,14 @@ import 'font-awesome/css/font-awesome.css';
 
 class App extends React.Component {
 
+	onHeaderClicked(event) {
+		console.log('hello');
+	}
+
 	render() {
 		return (
 			<div styleName="app-container">
-				<Header />
+				<Header onClick={this.onHeaderClicked.bind(this)}/>
 
 				<div styleName="app-body">
 					{this.props.children}

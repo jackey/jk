@@ -7,7 +7,55 @@
 }
 
 .form-row {
+	position: relative;
+}
 
+.search-region {
+	position: relative;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    background-color: #F7F7F7;
+    width: 80%;
+}
+
+.search-results ul {
+    list-style-type: none;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.search-results li {
+    line-height: 50px;
+    height: 50px;
+    font-size: 15px;
+    list-style-position: inside;
+    background-color: #BF1DBA;
+    padding-left: 10px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.search-results li:hover {
+    background-color: #500C4E;
+}
+
+.search-results li:hover a {
+    font-weight: bold;
+}
+
+.search-results a, .search-results a:visited, .search-results a:active {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px
+}
+
+.search-results a:hover {
+    color: #fff;
 }
 
 .input-github-url {

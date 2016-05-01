@@ -18,23 +18,32 @@ export const SearchKeywordChanged = (keyword) => {
 		const api = 'search/repositories';
 		let queryParams = `q=${keyword} in:name`;
 
-		fetch(`${host}/${api}?${queryParams}`)
-			.then(function (res) {
-				return res.text();
-			})
-			.then(function (body) {
-				let data = JSON.parse(body);
-				let repoList = data['items'].map( item => {
-					return {
-						id: item['id'],
-						name: item['name'],
-						url: item['html_url'],
-					}
-				});
-				dispatch({
-						type: SEARCH_KEYWORD_CHANGED,
-						repoList: repoList
-				});
+		if (keyword.length <= 0) {
+			dispatch({
+				type: SEARCH_KEYWORD_CHANGED,
+				repoList: []
 			});
+		}
+		else {
+			fetch(`${host}/${api}?${queryParams}`)
+				.then(function (res) {
+					return res.text();
+				})
+				.then(function (body) {
+					let data = JSON.parse(body);
+					let repoList = data['items'].map( item => {
+						return {
+							id: item['id'],
+							name: item['name'],
+							url: item['html_url'],
+							full_name: item['full_name'],
+						}
+					});
+					dispatch({
+							type: SEARCH_KEYWORD_CHANGED,
+							repoList: repoList
+					});
+				});
+		}
 	};
 }

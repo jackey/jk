@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "babel-watch server.js",
     "clean": "rimraf dist",
-    "build:webpack": "NODE_ENV=production webpack --progress --colors --config webpack.config.pro.js ",
+    "build:webpack": "webpack --watch --progress --colors --config webpack.config.dev.js ",
     "build": "npm run clean && npm run build:webpack",
-    "backend": "babel-watch server/server.js"
+    "backend": "babel-watch backend/index.js"
   },
   "repository": {
     "type": "git",

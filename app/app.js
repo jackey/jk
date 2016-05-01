@@ -2,33 +2,31 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import {Router, Route, browserHistory , IndexRoute } from 'react-router';
 import App from './components/App';
-import SimpleComm from './reducers';
+import JK from './reducers';
 import {createStore, applyMiddleware} from 'redux';
 import { Provider } from 'react-redux'; 
 import chunk from 'redux-thunk';
 
 
-let store = createStore(SimpleComm, applyMiddleware(chunk));
+let store = createStore(JK, applyMiddleware(chunk));
 
 // routes
 import HomeRoute from './routes/HomeRoute';
 
-// 卖家快速发布
-import DealerQuickSellHome from './routes/DealerQuickSellHome';
-
-// 发布产品
-import DealerUploadProduct from './routes/DealerUploadProduct';
-
+// 生成Repo 页面
+import RepoGenerate from './routes/RepoGenerate';
 
 // 路由配置
 ReactDom.render((
 	<Provider store={store}>
-		<Router history={browserHistory}>
+		<Router history={browserHistory} >
 			<Route path="/" component={App}>
 				<IndexRoute component={HomeRoute} />
+	
+				<Route path="repo/generate" component={RepoGenerate} />
+
 			</Route>
 
-			
 		</Router>
 
 	</Provider>), document.getElementById('body'));

@@ -1,13 +1,10 @@
 import {combineReducers} from 'redux';
-import DealerProduct from './DealerProduct';
 import {SearchRepoListChanged} from './SearchedRepo';
-import {ImageUploadPreview, UploadProduct} from './DealerUploadProduct';
+import {RepoInfo} from './RepoInfo';
 
-const SimpleComm = combineReducers({
-	DealerProduct,
-	ImageUploadPreview,
-	UploadProduct,
-	SearchRepoListChanged
+const JK = combineReducers({
+	SearchRepoListChanged,
+	RepoInfo
 });
 
-export default SimpleComm
+export default JK
